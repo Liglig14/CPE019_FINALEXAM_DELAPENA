@@ -11,7 +11,7 @@ st.set_page_config(page_title="Weather Classifier", layout="centered")
 
 # -- Configuration --
 MODEL_URL = "https://drive.google.com/uc?export=download&id=1jn2DOir7LlkA9qY1ifY2STEl3FmLM09K"
-MODEL_PATH = "model.h5"
+MODEL_PATH = "weather.h5"
 IMG_SIZE = (224, 224)  # Input size for MobileNetV2
 CLASS_NAMES = ['Cloudy', 'Rainy', 'Shine', 'Sunrise']  # Update if you used different labels
 
