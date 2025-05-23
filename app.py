@@ -5,8 +5,6 @@ import urllib.request
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from PIL import Image
-import warnings
-warnings.filterwarnings("ignore", category=UserWarning)
 
 # -- Streamlit page config MUST be the very first Streamlit command --
 st.set_page_config(page_title="Weather Classifier", layout="centered")
@@ -36,7 +34,7 @@ uploaded_file = st.file_uploader("Upload image here", type=["jpg", "jpeg", "png"
 
 if uploaded_file is not None:
     img = Image.open(uploaded_file).convert('RGB')
-    st.image(img, caption="Uploaded Image", use_column_width=True)
+    st.image(img, caption="Uploaded Image", use_container_width=True)
 
     # Preprocess the image
     img_resized = img.resize(IMG_SIZE)
