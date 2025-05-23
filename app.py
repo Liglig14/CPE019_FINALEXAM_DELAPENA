@@ -5,6 +5,8 @@ import urllib.request
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from PIL import Image
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning)
 
 # -- Streamlit page config MUST be the very first Streamlit command --
 st.set_page_config(page_title="Weather Classifier", layout="centered")
